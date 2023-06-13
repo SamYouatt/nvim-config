@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+
+    -- THEMES
     use({ 'tomasiser/vim-code-dark' })
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -21,9 +23,18 @@ return require('packer').startup(function(use)
 
     use({ 'navarasu/onedark.nvim' })
 
+    use({ 'folke/tokyonight.nvim' })
+
+    use({ 'rebelot/kanagawa.nvim' })
+    -- END THEMES
+
+
     use {
         'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }
     }
+
+    use {
+        "windwp/nvim-ts-autotag" }
 
     use {
         'theprimeagen/harpoon'
@@ -64,7 +75,9 @@ return require('packer').startup(function(use)
 
     use {
         "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
     }
 
     use {
@@ -73,4 +86,6 @@ return require('packer').startup(function(use)
     }
 
     use { "numToStr/Comment.nvim" }
+
+    use { "tpope/vim-surround" }
 end)

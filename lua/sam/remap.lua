@@ -6,4 +6,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzn")
+vim.keymap.set("n", "N", "NzzzN")
 
+-- like paste but won't replace buffer with what was deleted
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+vim.keymap.set("n", "Q", "<nop>")
