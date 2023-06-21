@@ -26,18 +26,24 @@ require('tokyonight').setup({
 
 require('kanagawa').setup({
     functionStyle = { italic = true },
-    colors = {
-        theme = {
-            all = {
-                ui = {
-                    bg_gutter = "none",
-                }
-            }
-        }
-    },
     overrides = function(colors)
         local theme = colors.theme
         return {
+            -- Telescope ui, made the background transparent but use the nice warm white for borders
+            TelescopeTitle = { fg = theme.ui.special, bold = true },
+            TelescopePromptNormal = { bg = "none" },
+            TelescopePromptBorder = { fg = theme.ui.fg_dim, bg = "none" },
+            TelescopeResultsNormal = { fg = theme.ui.fg, bg = "none" },
+            TelescopeResultsBorder = { fg = theme.ui.fg_dim, bg = "none" },
+            TelescopePreviewNormal = { bg = "none" },
+            TelescopePreviewBorder = { bg = "none", fg = theme.ui.fg_dim },
+
+            -- Dark colours for popup completion
+            Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+            PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+            PmenuSbar = { bg = theme.ui.bg_m1 },
+            PmenuThumb = { bg = theme.ui.bg_p2 },
+
             NormalFloat = { bg = "none" },
             FloatBorder = { bg = "none" },
             FloatTitle = { bg = "none" },
@@ -45,6 +51,8 @@ require('kanagawa').setup({
         }
     end,
 })
+
+require('catppuccin')
 
 vim.o.termguicolors = true
 
@@ -56,7 +64,7 @@ vim.g.nord_bold = false
 vim.g.nord_borders = true
 
 function ColorMyPencils(color)
-    color = color or "kanagawa"
+    color = color or "catppuccin"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
