@@ -26,6 +26,10 @@ return require('packer').startup(function(use)
     use({ 'folke/tokyonight.nvim' })
 
     use({ 'rebelot/kanagawa.nvim' })
+
+    use({ 'catppuccin/nvim' })
+
+    use({ 'mcchrish/zenbones.nvim' })
     -- END THEMES
 
 
