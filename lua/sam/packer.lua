@@ -75,6 +75,8 @@ return require('packer').startup(function(use)
 
     }
 
+    use({ "jose-elias-alvarez/null-ls.nvim" })
+
     use({ 'projekt0n/github-nvim-theme' })
 
     use {
