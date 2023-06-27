@@ -5,4 +5,5 @@ null_ls.setup({
         null_ls.builtins.formatting.eslint,
         null_ls.builtins.formatting.prettier,
     },
+    debug = true
 })
