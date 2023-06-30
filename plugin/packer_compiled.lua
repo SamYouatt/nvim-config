@@ -221,6 +221,11 @@ _G.packer_plugins = {
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-vinegar"] = {
+    loaded = true,
+    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-vinegar",
+    url = "https://github.com/tpope/vim-vinegar"
+  },
   ["zenbones.nvim"] = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/zenbones.nvim",

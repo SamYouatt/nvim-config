@@ -94,4 +94,6 @@ return require('packer').startup(function(use)
     use { "numToStr/Comment.nvim" }
 
     use { "tpope/vim-surround" }
+
+    use "tpope/vim-vinegar"
 end)
