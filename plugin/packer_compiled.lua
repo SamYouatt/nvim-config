@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["Comment.nvim"] = {
-    loaded = true,
-    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/Comment.nvim",
-    url = "https://github.com/numToStr/Comment.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -88,11 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   harpoon = {
     loaded = true,
@@ -171,11 +161,6 @@ _G.packer_plugins = {
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -211,6 +196,11 @@ _G.packer_plugins = {
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-code-dark",
     url = "https://github.com/tomasiser/vim-code-dark"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -225,11 +215,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/vim-vinegar",
     url = "https://github.com/tpope/vim-vinegar"
-  },
-  ["zenbones.nvim"] = {
-    loaded = true,
-    path = "/Users/samyouatt/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
-    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 

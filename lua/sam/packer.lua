@@ -21,8 +21,8 @@ return require("packer").startup(function(use)
     -- Code improvements
     use "windwp/nvim-ts-autotag"
     use "jose-elias-alvarez/null-ls.nvim"
-    use "numToStr/Comment.nvim"
     use "tpope/vim-surround"
+    use "tpope/vim-commentary"
 
     use {
         "nvim-telescope/telescope.nvim",
@@ -66,12 +66,9 @@ return require("packer").startup(function(use)
 
     -- THEMES
     use "tomasiser/vim-code-dark"
-    use({ "rose-pine/neovim", as = "rose-pine" })
+    use { "rose-pine/neovim", as = "rose-pine" }
     use "shaunsingh/nord.nvim"
-    use "navarasu/onedark.nvim"
     use "folke/tokyonight.nvim"
     use "rebelot/kanagawa.nvim"
     use "catppuccin/nvim"
-    use "mcchrish/zenbones.nvim"
-    use "projekt0n/github-nvim-theme"
 end)
