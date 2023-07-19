@@ -1,6 +1,6 @@
 require('rose-pine').setup({
-    variant = "dawn",
-    dark_variant = "moon",
+    variant = 'auto',
+    dark_variant = 'moon'
 })
 
 require('nord')
@@ -65,6 +65,7 @@ function ColorMyPencils(color)
 
     vim.cmd.colorscheme(color)
 
+    vim.o.background = 'light'
     -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
