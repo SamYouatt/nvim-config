@@ -1,12 +1,9 @@
 require('rose-pine').setup({
-    disable_background = true
+    variant = "dawn",
+    dark_variant = "moon",
 })
 
 require('nord')
-
-require('onedark').setup({
-    transparent = true
-})
 
 require('tokyonight').setup({
     style = "moon",
@@ -64,10 +61,11 @@ vim.g.nord_bold = false
 vim.g.nord_borders = true
 
 function ColorMyPencils(color)
-    color = color or "catppuccin"
+    color = color or "rose-pine"
+
     vim.cmd.colorscheme(color)
 
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
