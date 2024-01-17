@@ -14,7 +14,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- Install plugins here
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate'
+    },
 
     -- Editor essentials
     'tpope/vim-fugitive',
@@ -25,3 +28,5 @@ require("lazy").setup({
 })
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+vim.cmd.colorscheme('rose-pine')
