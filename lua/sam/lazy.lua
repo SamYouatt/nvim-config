@@ -29,6 +29,12 @@ require("lazy").setup({
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     },
 
+    -- Code navigation
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+
     -- Color scheme
     { 'rose-pine/neovim', name = 'rose-pine', lazy = true },
 })
@@ -72,3 +78,12 @@ require('lualine').setup {
     },
 }
 vim.cmd.colorscheme('rose-pine')
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>ps', function()
+    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+end)
+vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
