@@ -18,6 +18,7 @@ require("lazy").setup({
 
     -- Editor essentials
     'tpope/vim-fugitive',
+    'tpope/vim-vinegar',
 
     -- Color scheme
     { 'rose-pine/neovim', name = 'rose-pine', lazy = true },
