@@ -18,6 +18,5 @@ return {
                 lualine_z = { 'location' }
             },
         }
-        vim.cmd.colorscheme('rose-pine')
     end
 }
