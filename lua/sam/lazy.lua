@@ -13,4 +13,4 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("sam.plugins")
+require("lazy").setup({spec = "sam.plugins", change_detection = {notify = false}})
