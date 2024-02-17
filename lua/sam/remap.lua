@@ -13,6 +13,12 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Quick fix navigation
+vim.keymap.set("n", "<C-Down>", ":cn<CR>")
+vim.keymap.set("n", "<C-Up>", ":cp<CR>")
+vim.keymap.set("n", "<C-j>", ":cn<CR>")
+vim.keymap.set("n", "<C-k>", ":cp<CR>")
+
 -- Diagnostics
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float) -- when on an error pressing this floats the diagnostic messages
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
