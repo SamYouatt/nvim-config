@@ -1,5 +1,17 @@
 -- All plugins which don't require any additional setup live in here
 return {
-    'tpope/vim-vinegar',
-    { 'rose-pine/neovim', name = 'rose-pine' },
+    "tpope/vim-vinegar",
+
+    -- Colourschemes
+    { "rose-pine/neovim",           name = "rose-pine" },
+    { "projekt0n/github-nvim-theme" },
+    {
+        "folke/tokyonight.nvim",
+        config = function()
+            require("tokyonight").setup({
+                style = "night",
+                light_style = "day"
+            })
+        end
+    },
 }
