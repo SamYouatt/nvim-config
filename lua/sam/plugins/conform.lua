@@ -8,10 +8,10 @@ return {
 				lua = {
 					"stylua",
 				},
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
+				javascript = { "eslint_d", "prettierd" },
+				typescript = { "eslint_d", "prettierd" },
+				javascriptreact = { "eslint_d", "prettierd" },
+				typescriptreact = { "eslint_d", "prettierd" },
 			},
 		})
 
