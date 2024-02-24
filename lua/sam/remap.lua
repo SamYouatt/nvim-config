@@ -19,6 +19,8 @@ vim.keymap.set("n", "<C-Up>", ":cp<CR>")
 vim.keymap.set("n", "<C-n>", ":cn<CR>")
 vim.keymap.set("n", "<C-p>", ":cp<CR>")
 
+vim.keymap.set("n", "<leader>cx", ":cclose<CR>")
+
 -- Diagnostics
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float) -- when on an error pressing this floats the diagnostic messages
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
