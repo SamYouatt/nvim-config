@@ -31,6 +31,7 @@ return {
         lspconfig.rust_analyzer.setup({})
         lspconfig.tsserver.setup({})
         lspconfig.cssls.setup({})
+        lspconfig.eslint.setup({})
 
         -- Completion setup
         local cmp = require('cmp')
@@ -58,9 +59,8 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-                { name = 'luasnip' },
-            }, {
                 { name = 'buffer' },
+                { name = 'luasnip' },
             })
         })
     end
