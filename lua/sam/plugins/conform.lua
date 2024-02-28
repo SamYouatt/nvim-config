@@ -8,15 +8,16 @@ return {
 				lua = {
 					"stylua",
 				},
-				javascript = { "eslint_d", "prettierd" },
-				typescript = { "eslint_d", "prettierd" },
-				javascriptreact = { "eslint_d", "prettierd" },
-				typescriptreact = { "eslint_d", "prettierd" },
+				javascript = { "eslint_d", "prettier" },
+				typescript = { "eslint_d", "prettier" },
+				javascriptreact = { "eslint_d", "prettier" },
+				typescriptreact = { "eslint_d", "prettier" },
 			},
+            log_level = vim.log.levels.TRACE,
 		})
 
 		vim.keymap.set("n", "<space>cf", function()
-			conform.format({ async = true, lsp_fallback = true })
+			conform.format({ async = true, lsp_fallback = false })
 		end)
 	end,
 }
