@@ -11,17 +11,23 @@ return {
 		},
 	},
 	config = function()
-        require("telescope").setup({
-            extensions = {
-                fzf = {
-                    fuzzy = true,
-                    -- requires telescope-fzf-native.nvim to be built
-                    override_generic_sorter = true,
-                    override_filter_sorter = true,
-                    case_mode = "smart_case",
-                }
-            }
-        })
+		require("telescope").setup({
+			defaults = {
+				file_ignore_patterns = { "app_head.js" },
+				-- preview = {
+				-- 	treesitter = false,
+				-- },
+			},
+			extensions = {
+				fzf = {
+					fuzzy = true,
+					-- requires telescope-fzf-native.nvim to be built
+					override_generic_sorter = true,
+					override_filter_sorter = true,
+					case_mode = "smart_case",
+				},
+			},
+		})
 
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
