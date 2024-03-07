@@ -29,9 +29,11 @@ return {
 		-- Setup language servers
 		lspconfig.lua_ls.setup({})
 		lspconfig.rust_analyzer.setup({})
-		lspconfig.tsserver.setup({})
 		lspconfig.cssls.setup({})
 		lspconfig.eslint.setup({})
+
+        -- Covererd by typescript-tools.nvim instead
+		-- lspconfig.tsserver.setup({})
 
 		-- Completion setup
 		local cmp = require("cmp")
