@@ -1,6 +1,6 @@
 vim.o.termguicolors = true
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("zenbones")
 
 --[[
 vim.api.nvim_create_autocmd({"OptionSet"}, {

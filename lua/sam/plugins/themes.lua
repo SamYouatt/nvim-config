@@ -17,4 +17,8 @@ return {
 		end,
 	},
 	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" } },
+	{ "shaunsingh/nord.nvim" },
+	{ "navarasu/onedark.nvim" },
+	{ "rmehri01/onenord.nvim" },
 }
