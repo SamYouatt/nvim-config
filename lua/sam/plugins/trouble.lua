@@ -1,11 +1,12 @@
 return {
 	"folke/trouble.nvim",
-	opts = {
-		icons = false,
-		indent_lines = false,
-	},
 	config = function()
 		local trouble = require("trouble")
+
+		trouble.setup({
+			icons = false,
+			indent_lines = false,
+		})
 
 		vim.keymap.set("n", "<leader>tw", function()
 			trouble.toggle("workspace_diagnostics")
