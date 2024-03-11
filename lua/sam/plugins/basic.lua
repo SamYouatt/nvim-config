@@ -2,10 +2,10 @@
 return {
     -- Improvements to netwr
     "tpope/vim-vinegar",
-    -- Detect tabwidth automatically
-    "tpope/vim-sleuth",
     -- Comment commands based on gc
     "tpope/vim-commentary",
     -- Minimal auto pairs
     -- "cohama/lexima.vim",
+    -- Show hex colours
+    { "brenoprata10/nvim-highlight-colors", opts = {} },
 }
