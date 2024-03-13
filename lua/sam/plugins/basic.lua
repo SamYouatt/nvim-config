@@ -8,4 +8,6 @@ return {
     -- "cohama/lexima.vim",
     -- Show hex colours
     { "brenoprata10/nvim-highlight-colors", opts = {} },
+
+    { "stevearc/dressing.nvim", opts = {} },
 }
