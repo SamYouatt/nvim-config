@@ -33,7 +33,7 @@ return {
         lspconfig.cssls.setup({})
         lspconfig.eslint.setup({})
         lspconfig.gopls.setup({})
-        lspconfig.csharp_ls.setup({})
+        -- lspconfig.csharp_ls.setup({})
         -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
         lspconfig.tailwindcss.setup({
             filetypes = {
@@ -79,7 +79,7 @@ return {
 
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort(),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<C-y>"] = cmp.mapping.confirm({ select = true }),
             }),
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
