@@ -22,6 +22,7 @@ return {
                 "tsserver",
                 "cssls",
                 "gopls",
+                "csharp_ls",
             },
         })
 
