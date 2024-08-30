@@ -4,6 +4,8 @@ return {
     "tpope/vim-surround",
     "mbbill/undotree",
 
+    "nvim-tree/nvim-web-devicons",
+
     -- Show hex colours
     { "brenoprata10/nvim-highlight-colors", opts = {} },
     -- Nicer code action and similar
