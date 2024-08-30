@@ -27,6 +27,10 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist) -- opens the quickfix list with all the diagnostics in the buffer
 
+-- better window management
+vim.keymap.set("n", "<C-Left>", "<c-w><c-h>")
+vim.keymap.set("n", "<C-Right>", "<c-w><c-l>")
+
 -- Undotree
 vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
 
