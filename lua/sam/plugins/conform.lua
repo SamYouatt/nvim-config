@@ -8,12 +8,14 @@ return {
 				lua = {
 					"stylua",
 				},
-				javascript = { "eslint_d", "prettier" },
-				typescript = { "eslint_d", "prettier" },
-				javascriptreact = { "eslint_d", "prettier" },
-				typescriptreact = { "eslint_d", "prettier" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
+				html = { "prettier" },
+				htmldjango = { "prettier" },
 			},
-            log_level = vim.log.levels.TRACE,
+			log_level = vim.log.levels.TRACE,
 		})
 
 		vim.keymap.set("n", "<space>cf", function()

@@ -2,6 +2,7 @@
 return {
     "tpope/vim-sleuth",
     "tpope/vim-surround",
+    "mbbill/undotree",
 
     -- Show hex colours
     { "brenoprata10/nvim-highlight-colors", opts = {} },

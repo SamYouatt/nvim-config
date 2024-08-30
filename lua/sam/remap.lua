@@ -27,6 +27,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist) -- opens the quickfix list with all the diagnostics in the buffer
 
+-- Undotree
+vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
+
 -- Lsp remaps that must be loaded after lsp attaches
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),

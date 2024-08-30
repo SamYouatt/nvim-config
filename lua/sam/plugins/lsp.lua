@@ -31,7 +31,7 @@ return {
         -- Setup language servers
         lspconfig.lua_ls.setup({})
         lspconfig.rust_analyzer.setup({})
-        lspconfig.cssls.setup({})
+        lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
         lspconfig.eslint.setup({})
         lspconfig.gopls.setup({})
         lspconfig.csharp_ls.setup({})
@@ -40,6 +40,7 @@ return {
             filetypes = {
                 "css",
                 "html",
+                "htmldjango",
                 "javascript",
                 "javascriptreact",
                 "typescript",

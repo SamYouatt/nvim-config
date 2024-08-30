@@ -14,7 +14,7 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
-				file_ignore_patterns = { "app_head.js", "/dist", "package-lock.json" },
+				-- file_ignore_patterns = { "app_head.js", "/dist", "package-lock.json" },
 				-- preview = {
 				-- 	treesitter = false,
 				-- },
