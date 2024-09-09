@@ -11,5 +11,7 @@ return {
     -- Nicer code action and similar
     { "stevearc/dressing.nvim", opts = {} },
 
+    { "lewis6991/gitsigns.nvim", opts = {} },
+
     -- { dir = "/Users/samyouatt/Developer/proper-dave", name="proper-dave", opts = {}, config = true },
 }
