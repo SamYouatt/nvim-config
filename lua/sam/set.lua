@@ -1,6 +1,8 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.o.termguicolors = true
+
 -- highlight current line number in sidebar but don't highlight whole row
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
