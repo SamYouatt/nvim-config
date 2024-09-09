@@ -11,5 +11,5 @@ return {
     -- Nicer code action and similar
     { "stevearc/dressing.nvim", opts = {} },
 
-    { dir = "/Users/samyouatt/Developer/proper-dave", name="proper-dave", opts = {}, config = true },
+    -- { dir = "/Users/samyouatt/Developer/proper-dave", name="proper-dave", opts = {}, config = true },
 }
