@@ -21,7 +21,6 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-                "tsserver",
                 "cssls",
                 "gopls",
                 "csharp_ls",
@@ -57,9 +56,6 @@ return {
             -- Only start the tailwindcss lang server if the tailwind config is in the root directory
             root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts'),
         })
-
-        -- Covererd by typescript-tools.nvim instead
-        -- lspconfig.tsserver.setup({})
 
         -- Completion setup
         local cmp = require("cmp")
