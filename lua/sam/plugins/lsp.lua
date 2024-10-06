@@ -36,6 +36,7 @@ return {
         lspconfig.eslint.setup({})
         lspconfig.gopls.setup({})
         lspconfig.csharp_ls.setup({})
+        lspconfig.zls.setup({})
         -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
         lspconfig.tailwindcss.setup({
             filetypes = {
