@@ -8,6 +8,9 @@ return {
 					darken = {
 						floats = true,
 					},
+					styles = {
+						comments = 'italic',
+					},
 				},
 			})
 		end,
