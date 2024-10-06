@@ -14,11 +14,28 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
-				-- file_ignore_patterns = { "app_head.js", "/dist", "package-lock.json" },
-				-- preview = {
-				-- 	treesitter = false,
-				-- },
+				path_display = { "tail" },
+				layout_config = {
+					vertical = { width = 0.7 },
+				},
 			},
+			-- pickers = {
+			-- 	git_files = {
+			-- 		theme = "dropdown",
+			-- 	},
+			-- 	find_files = {
+			-- 		theme = "dropdown",
+			-- 	},
+			-- 	lsp_definitions = {
+			-- 		theme = "dropdown",
+			-- 	},
+			-- 	lsp_references = {
+			-- 		theme = "dropdown",
+			-- 	},
+			-- 	live_grep = {
+			-- 		theme = "dropdown",
+			-- 	},
+			-- },
 			extensions = {
 				fzf = {
 					fuzzy = true,
