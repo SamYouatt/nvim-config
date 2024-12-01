@@ -4,11 +4,11 @@ return {
     update_interval = 10 * 1000,
     set_dark_mode = function()
       vim.api.nvim_set_option_value("background", "dark", {})
-      vim.cmd("colorscheme github_dark_default")
+      vim.cmd("colorscheme catppuccin-mocha")
     end,
     set_light_mode = function()
       vim.api.nvim_set_option_value("background", "light", {})
-      vim.cmd("colorscheme github_light_default")
+      vim.cmd("colorscheme catppuccin-latte")
     end,
   },
 }
