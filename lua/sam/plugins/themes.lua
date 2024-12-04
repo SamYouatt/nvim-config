@@ -48,8 +48,13 @@ return {
 			color_overrides = {
 				mocha = {
 					base = "#101019",
-					mantle = "#0a0a10",
-					crust = "#040406",
+					mantle = "#0c0c13",
+					crust = "#08080d",
+				},
+				latte = {
+					base = "#fcfcfd",
+					mantle = "#f6f6f9",
+					crust = "#f0f0f5",
 				},
 			},
 			integrations = {
