@@ -14,6 +14,18 @@ return {
         "saadparwaiz1/cmp_luasnip",
 
         "nvim-tree/nvim-web-devicons",
+
+        {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {
+                library = {
+                    -- See the configuration section for more details
+                    -- Load luvit types when the `vim.uv` word is found
+                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                },
+            },
+        },
     },
     config = function()
         require("mason").setup()
