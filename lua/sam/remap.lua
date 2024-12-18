@@ -22,7 +22,7 @@ vim.keymap.set("n", "[q", ":cp<CR>")
 vim.keymap.set("n", "<leader>cx", ":cclose<CR>")
 
 -- Diagnostics
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float) -- when on an error pressing this floats the diagnostic messages
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist) -- opens the quickfix list with all the diagnostics in the buffer
@@ -30,7 +30,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist) -- opens the quickfi
 -- better window management
 vim.keymap.set("n", "<C-Left>", "<c-w><c-h>")
 vim.keymap.set("n", "<C-Right>", "<c-w><c-l>")
+vim.keymap.set("n", "<C-Down>", "<c-w><c-j>")
+vim.keymap.set("n", "<C-Up>", "<c-w><c-k>")
 
 -- Undotree
 vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
-
