@@ -21,7 +21,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "1d0a8b91d02511a7f4d7aa74b2db0e19d6e780be" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "ad8f0a472148c3e0ae9851e26a722ee4e29b1595" },
   "nvim-web-devicons": { "branch": "master", "commit": "0eb18da56e2ba6ba24de7130a12bcc4e31ad11cb" },
-  "obsidian.nvim": { "branch": "main", "commit": "6888c7620109684371ed9304df2ba68abc78d558" },
   "oil.nvim": { "branch": "master", "commit": "dba037598843973b8c54bc5ce0318db4a0da439d" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "rose-pine": { "branch": "main", "commit": "91548dca53b36dbb9d36c10f114385f759731be1" },
