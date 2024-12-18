@@ -3,10 +3,6 @@ return {
 	"tpope/vim-sleuth",
 	"tpope/vim-surround",
 	"mbbill/undotree",
-
 	{ "brenoprata10/nvim-highlight-colors", opts = {} },
-	{ "stevearc/dressing.nvim", opts = {} },
-	-- { "lewis6991/gitsigns.nvim", opts = {} },
-
-	-- { dir = "/Users/samyouatt/Developer/proper-dave", name="proper-dave", opts = {}, config = true },
+	{ "folke/snacks.nvim",                  opts = { input = {} } },
 }
