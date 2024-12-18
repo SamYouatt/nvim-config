@@ -8,7 +8,8 @@ return {
                 documentation = {
                     auto_show = true,
                 }
-            }
+            },
+            signature = { enabled = true },
         },
     },
     {
@@ -16,11 +17,8 @@ return {
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
-
-            "saghen/blink.cmp",
-
             "nvim-tree/nvim-web-devicons",
-
+            "saghen/blink.cmp",
             {
                 "folke/lazydev.nvim",
                 ft = "lua",
@@ -45,17 +43,22 @@ return {
                 },
             })
 
+            -- Completion setup
+            local blink = require "blink.cmp"
+            blink.setup({})
+            local capabilities = blink.get_lsp_capabilities()
+
             local lspconfig = require("lspconfig")
 
             -- Setup language servers
-            lspconfig.lua_ls.setup({})
-            lspconfig.rust_analyzer.setup({})
+            lspconfig.lua_ls.setup({ capabilities })
+            lspconfig.rust_analyzer.setup({ capabilities })
             lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
-            lspconfig.eslint.setup({})
-            lspconfig.gopls.setup({})
-            lspconfig.csharp_ls.setup({})
-            lspconfig.zls.setup({})
-            lspconfig.ocamllsp.setup({})
+            lspconfig.eslint.setup({ capabilities })
+            lspconfig.gopls.setup({ capabilities })
+            lspconfig.csharp_ls.setup({ capabilities })
+            lspconfig.zls.setup({ capabilities })
+            lspconfig.ocamllsp.setup({ capabilities })
             -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
             lspconfig.tailwindcss.setup({
                 filetypes = {
@@ -75,10 +78,8 @@ return {
                 },
                 -- Only start the tailwindcss lang server if the tailwind config is in the root directory
                 root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts'),
+                capabilities,
             })
-
-            -- Completion setup
-            require("blink.cmp").setup({})
 
             -- Diagnostic setup
             vim.diagnostic.config {
@@ -91,6 +92,28 @@ return {
                     }
                 }
             }
+
+            -- Remaps
+            vim.api.nvim_create_autocmd('LspAttach', {
+                group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+                callback = function(ev)
+                    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+                    local opts = { buffer = ev.buf }
+
+                    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+                    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+                    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+                    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+
+                    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+                    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+
+                    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+
+                    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+                end,
+            })
         end,
     },
 }
