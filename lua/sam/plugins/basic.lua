@@ -3,7 +3,6 @@ return {
 	"tpope/vim-sleuth",
 	"tpope/vim-surround",
 	"mbbill/undotree",
-	"nvim-tree/nvim-web-devicons",
 
 	{ "brenoprata10/nvim-highlight-colors", opts = {} },
 	{ "stevearc/dressing.nvim", opts = {} },
