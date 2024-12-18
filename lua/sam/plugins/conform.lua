@@ -1,7 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	config = function()
-		local conform = require("conform")
+		local conform = require "conform"
 
 		conform.setup({
 			formatters_by_ft = {
@@ -18,8 +18,8 @@ return {
 			log_level = vim.log.levels.TRACE,
 		})
 
-		vim.keymap.set("n", "<space>cf", function()
-			conform.format({ async = true, lsp_fallback = false })
+		vim.keymap.set("n", "<space>f", function()
+			conform.format({ async = true, lsp_fallback = true })
 		end)
 	end,
 }
