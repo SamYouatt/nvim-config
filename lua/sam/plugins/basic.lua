@@ -2,7 +2,6 @@
 return {
 	"tpope/vim-sleuth",
 	"tpope/vim-surround",
-	"mbbill/undotree",
 	{ "brenoprata10/nvim-highlight-colors", opts = {} },
 	{ "folke/snacks.nvim",                  opts = { input = {} } },
 }

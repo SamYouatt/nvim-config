@@ -32,6 +32,3 @@ vim.keymap.set("n", "<C-Left>", "<c-w><c-h>")
 vim.keymap.set("n", "<C-Right>", "<c-w><c-l>")
 vim.keymap.set("n", "<C-Down>", "<c-w><c-j>")
 vim.keymap.set("n", "<C-Up>", "<c-w><c-k>")
-
--- Undotree
-vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
