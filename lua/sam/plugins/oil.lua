@@ -8,6 +8,7 @@ return {
 	    },
 	    keymaps = {
 		["<C-p>"] = false,
+		["<C-h>"] = false,
 	    },
 	}
 
