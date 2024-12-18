@@ -3,9 +3,11 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Auto-centre next / search result in the view
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Ctrl C to yank to system clipboard
 vim.keymap.set("n", "<C-c>", '"+y')
 vim.keymap.set("v", "<C-c>", '"+y')
 
