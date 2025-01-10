@@ -39,7 +39,6 @@ return {
                     "rust_analyzer",
                     "cssls",
                     "gopls",
-                    "csharp_ls",
                 },
             })
 
