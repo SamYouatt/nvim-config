@@ -70,5 +70,5 @@ return {
 			},
 		}
 	},
-	{ dir = "/Users/samyouatt/Developer/fleety", name = "fleety",    opts = {} },
+	-- { dir = "/Users/samyouatt/Developer/fleety", name = "fleety",    opts = {} },
 }
