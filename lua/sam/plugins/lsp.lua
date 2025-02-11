@@ -9,6 +9,9 @@ return {
                     auto_show = true,
                 }
             },
+            sources = {
+                cmdline = {},
+            },
             signature = { enabled = true },
         },
     },
@@ -44,7 +47,6 @@ return {
 
             -- Completion setup
             local blink = require "blink.cmp"
-            blink.setup({})
             local capabilities = blink.get_lsp_capabilities()
 
             local lspconfig = require("lspconfig")
