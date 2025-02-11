@@ -6,6 +6,9 @@ return {
 		config = function()
 			local cursorword = require "mini.cursorword"
 			cursorword.setup { delay = 1000 }
+
+			require("mini.ai").setup({})
+			require("mini.surround").setup()
 		end,
 
 		-- Make mini-icons function as a replacement for all nvim-web-devicons uses
