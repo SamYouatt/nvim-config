@@ -36,14 +36,7 @@ return {
         },
         config = function()
             require("mason").setup()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "rust_analyzer",
-                    "cssls",
-                    "gopls",
-                },
-            })
+            -- require("mason-lspconfig").setup({})
 
             -- Completion setup
             local blink = require "blink.cmp"
