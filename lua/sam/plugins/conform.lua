@@ -18,7 +18,7 @@ return {
 			log_level = vim.log.levels.TRACE,
 		})
 
-		vim.keymap.set("n", "<space>f", function()
+		vim.keymap.set("n", "<leader>f", function()
 			conform.format({ async = true, lsp_fallback = true })
 		end)
 	end,
