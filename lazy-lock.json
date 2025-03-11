@@ -28,7 +28,6 @@
   "render-markdown.nvim": { "branch": "main", "commit": "17a77463f945c4b9e4f371c752efd90e3e1bf604" },
   "rose-pine": { "branch": "main", "commit": "20c7940da844aa4f162a64e552ae3c7e9fdc3b93" },
   "snacks.nvim": { "branch": "main", "commit": "12a7ea28b97827575a1768d6013dd3c7bedd5ebb" },
-  "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "tokyonight.nvim": { "branch": "main", "commit": "dca4adba7dc5f09302a00b0e76078d54d82d2658" },
   "trouble.nvim": { "branch": "main", "commit": "6f380b8826fb819c752c8fd7daaee9ef96d4c689" },
   "typescript-tools.nvim": { "branch": "master", "commit": "35e397ce467bedbbbb5bfcd0aa79727b59a08d4a" },
