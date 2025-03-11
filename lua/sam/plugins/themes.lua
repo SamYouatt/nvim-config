@@ -1,44 +1,42 @@
 return {
+	-- { dir = "/Users/samyouatt/Developer/fleety", name = "fleety",    opts = {} },
+	{ "navarasu/onedark.nvim" },
+	{ "rose-pine/neovim",     name = "rose-pine", },
 	{
 		"projekt0n/github-nvim-theme",
-		config = function()
-			require("github-theme").setup({
-				options = {
-					dim_inactive = true,
-					darken = {
-						floats = true,
-					},
-					styles = {
-						comments = 'italic',
-					},
+		opts = {
+			options = {
+				dim_inactive = true,
+				darken = {
+					floats = true,
 				},
-			})
-		end,
+				styles = {
+					comments = 'italic',
+				},
+			},
+		}
 	},
 	{
 		"folke/tokyonight.nvim",
-		config = function()
-			require("tokyonight").setup({
-				style = "moon",
-				light_style = "day",
-				styles = {
-					comments = { italic = true },
-					keywords = { italic = true },
-					sidebars = "normal",
-					floats = "normal",
-				},
-				-- Just can't get the light mode to not look shit
-				-- on_colors = function(colors)
-				-- 	if vim.o.background == "dark" then
-				-- 		colors.bg = "#000000" -- Black background for "night"
-				-- 	else
-				-- 		colors.bg = "#FFFFFF" -- White background for "day"
-				-- 	end
-				-- end,
-			})
-		end,
+		opts = {
+			style = "moon",
+			light_style = "day",
+			styles = {
+				comments = { italic = true },
+				keywords = { italic = true },
+				sidebars = "normal",
+				floats = "normal",
+			},
+			-- Just can't get the light mode to not look shit
+			-- on_colors = function(colors)
+			-- 	if vim.o.background == "dark" then
+			-- 		colors.bg = "#000000" -- Black background for "night"
+			-- 	else
+			-- 		colors.bg = "#FFFFFF" -- White background for "day"
+			-- 	end
+			-- end,
+		}
 	},
-	{ "rose-pine/neovim",                        name = "rose-pine", },
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -70,6 +68,4 @@ return {
 			},
 		}
 	},
-	{ "navarasu/onedark.nvim" },
-	-- { dir = "/Users/samyouatt/Developer/fleety", name = "fleety",    opts = {} },
 }
