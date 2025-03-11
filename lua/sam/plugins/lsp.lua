@@ -9,9 +9,6 @@ return {
                     auto_show = true,
                 }
             },
-            sources = {
-                cmdline = {},
-            },
             signature = { enabled = true },
         },
     },
@@ -39,8 +36,8 @@ return {
             -- require("mason-lspconfig").setup({})
 
             -- Completion setup
-            local blink = require "blink.cmp"
-            local capabilities = blink.get_lsp_capabilities()
+            local lspblink = require "blink.cmp"
+            local capabilities = lspblink.get_lsp_capabilities()
 
             local lspconfig = require("lspconfig")
 
