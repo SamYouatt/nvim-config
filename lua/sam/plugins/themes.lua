@@ -70,5 +70,6 @@ return {
 			},
 		}
 	},
+	{ "navarasu/onedark.nvim" },
 	-- { dir = "/Users/samyouatt/Developer/fleety", name = "fleety",    opts = {} },
 }
