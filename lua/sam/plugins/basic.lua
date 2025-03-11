@@ -4,4 +4,5 @@ return {
 	"tpope/vim-fugitive",
 	{ "j-hui/fidget.nvim",                  opts = {} },
 	{ "brenoprata10/nvim-highlight-colors", opts = {} },
+	{ "nvim-tree/nvim-web-devicons",        opts = {} },
 }
