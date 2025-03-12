@@ -4,17 +4,19 @@ return {
 	{ "rose-pine/neovim",     name = "rose-pine", },
 	{
 		"projekt0n/github-nvim-theme",
-		opts = {
-			options = {
-				dim_inactive = true,
-				darken = {
-					floats = true,
-				},
-				styles = {
-					comments = 'italic',
-				},
-			},
-		}
+		config = function()
+			require("github-theme").setup({
+				options = {
+					dim_inactive = true,
+					darken = {
+						floats = true,
+					},
+					styles = {
+						comments = 'italic',
+					},
+				}
+			})
+		end,
 	},
 	{
 		"folke/tokyonight.nvim",
