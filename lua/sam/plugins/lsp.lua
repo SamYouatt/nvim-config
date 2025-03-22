@@ -43,7 +43,16 @@ return {
 
             -- Setup language servers
             lspconfig.lua_ls.setup({ capabilities })
-            lspconfig.rust_analyzer.setup({ capabilities })
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+                settings = {
+                    ["rust-analyzer"] = {
+                        checkOnSave = {
+                            command = "clippy",
+                        },
+                    }
+                },
+            })
             lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
             lspconfig.eslint.setup({ capabilities })
             lspconfig.gopls.setup({ capabilities })
@@ -81,7 +90,7 @@ return {
                         [vim.diagnostic.severity.INFO] = "I",
                         [vim.diagnostic.severity.HINT] = "H",
                     }
-                }
+                },
             }
 
             -- Remaps
