@@ -45,16 +45,17 @@ return {
 
             -- Setup language servers
             lspconfig.lua_ls.setup({ capabilities })
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-                settings = {
-                    ["rust-analyzer"] = {
-                        checkOnSave = {
-                            command = "clippy",
-                        },
-                    }
-                },
-            })
+            -- lspconfig.rust_analyzer.setup({
+            --     capabilities = capabilities,
+            --     settings = {
+            --         ["rust-analyzer"] = {
+            --             checkOnSave = {
+            --                 command = "clippy",
+            --             },
+            --         }
+            --     },
+            -- })
+            vim.lsp.enable('rust-analyzer')
             lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
             lspconfig.eslint.setup({ capabilities })
             lspconfig.gopls.setup({ capabilities })
