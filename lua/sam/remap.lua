@@ -19,8 +19,6 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Quick fix navigation
 vim.keymap.set("n", "<C-Down>", ":cn<CR>")
 vim.keymap.set("n", "<C-Up>", ":cp<CR>")
-vim.keymap.set("n", "<C-n>", ":cn<CR>")
-vim.keymap.set("n", "<C-p>", ":cp<CR>")
 
 vim.keymap.set("n", "<leader>cx", ":cclose<CR>")
 
