@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+-- Move down/up half a page and center the landed line
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
