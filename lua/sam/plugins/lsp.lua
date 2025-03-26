@@ -37,7 +37,9 @@ return {
 
             -- Completion setup
             local lspblink = require "blink.cmp"
-            local capabilities = lspblink.get_lsp_capabilities()
+            local capabilities = lspblink.get_lsp_capabilities({
+                textDocument = { completion = { completionItem = { snippetSupport = false } } },
+            })
 
             local lspconfig = require("lspconfig")
 
