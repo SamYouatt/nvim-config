@@ -43,6 +43,9 @@ return {
 
             local lspconfig = require("lspconfig")
 
+            vim.lsp.enable('rust-analyzer')
+            vim.lsp.enable('zls')
+
             -- Setup language servers
             lspconfig.lua_ls.setup({ capabilities })
             -- lspconfig.rust_analyzer.setup({
@@ -55,12 +58,10 @@ return {
             --         }
             --     },
             -- })
-            vim.lsp.enable('rust-analyzer')
             lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
             lspconfig.eslint.setup({ capabilities })
             lspconfig.gopls.setup({ capabilities })
             lspconfig.csharp_ls.setup({ capabilities })
-            lspconfig.zls.setup({ capabilities })
             lspconfig.ocamllsp.setup({ capabilities })
             -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
             lspconfig.tailwindcss.setup({
