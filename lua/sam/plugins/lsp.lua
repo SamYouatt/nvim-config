@@ -33,7 +33,6 @@ return {
         },
         config = function()
             require("mason").setup()
-            -- require("mason-lspconfig").setup({})
 
             -- Completion setup
             local lspblink = require "blink.cmp"
@@ -43,24 +42,12 @@ return {
 
             local lspconfig = require("lspconfig")
 
-            vim.lsp.enable('rust-analyzer')
-            vim.lsp.enable('zls')
+            vim.lsp.enable({ "rust-analyzer", "zls", "gopls" })
 
             -- Setup language servers
             lspconfig.lua_ls.setup({ capabilities })
-            -- lspconfig.rust_analyzer.setup({
-            --     capabilities = capabilities,
-            --     settings = {
-            --         ["rust-analyzer"] = {
-            --             checkOnSave = {
-            --                 command = "clippy",
-            --             },
-            --         }
-            --     },
-            -- })
             lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
             lspconfig.eslint.setup({ capabilities })
-            lspconfig.gopls.setup({ capabilities })
             lspconfig.csharp_ls.setup({ capabilities })
             lspconfig.ocamllsp.setup({ capabilities })
             -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
