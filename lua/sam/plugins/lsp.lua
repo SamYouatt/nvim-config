@@ -50,6 +50,7 @@ return {
             lspconfig.eslint.setup({ capabilities })
             lspconfig.csharp_ls.setup({ capabilities })
             lspconfig.ocamllsp.setup({ capabilities })
+            lspconfig.svelte.setup({ capabilities })
             -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
             lspconfig.tailwindcss.setup({
                 filetypes = {
@@ -60,6 +61,8 @@ return {
                     "javascriptreact",
                     "typescript",
                     "typescriptreact",
+                    "tsx",
+                    "svelte",
                     "rust",
                 },
                 init_options = {
@@ -68,7 +71,8 @@ return {
                     },
                 },
                 -- Only start the tailwindcss lang server if the tailwind config is in the root directory
-                root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts'),
+                root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts',
+                    'package.json'),
                 capabilities,
             })
 
