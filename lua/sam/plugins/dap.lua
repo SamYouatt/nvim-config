@@ -17,6 +17,7 @@ return {
 
     vim.keymap.set("n", "<space>b", dap.toggle_breakpoint)
     vim.keymap.set("n", "<space>gb", dap.run_to_cursor)
+    vim.keymap.set("n", "<space>cb", dap.clear_breakpoints)
 
     -- Eval var under cursor
     vim.keymap.set("n", "<space>?", function()
@@ -45,6 +46,6 @@ return {
       ui.close()
     end
 
-    vim.fn.sign_define('DapBreakpoint', {text='●', texthl='DapBreakpoint', linehl='', numhl=''})
+    vim.fn.sign_define('DapBreakpoint', { text = '●', texthl = 'DapBreakpoint', linehl = '', numhl = '' })
   end
 }
