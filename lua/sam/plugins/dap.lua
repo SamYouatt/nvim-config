@@ -31,6 +31,8 @@ return {
     vim.keymap.set("n", "<F3>", dap.step_over)
     vim.keymap.set("n", "<F4>", dap.step_out)
     vim.keymap.set("n", "<F5>", dap.step_back)
+    -- This is actually shift-f5. To see literal keycodes: enter insert mode; press ctrl+v; type keycode
+    vim.keymap.set("n", "<F17>", dap.terminate)
     vim.keymap.set("n", "<F13>", dap.restart)
 
     -- Auto handling of open and closing when exit/entering debugging
