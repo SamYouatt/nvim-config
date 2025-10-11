@@ -1,7 +1,9 @@
+---@type vim.lsp.Config
 return {
     cmd = { 'zls' },
-    root_markers = { 'build.zig' },
-    filetypes = { 'zig', 'zon' },
+    filetypes = { 'zig', 'zir', 'zon' },
+    root_markers = { 'zls.json', 'build.zig', '.git' },
+    workspace_required = false,
     settings = {
         zls = {
             enable_build_on_save = true,
