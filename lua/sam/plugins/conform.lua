@@ -14,6 +14,14 @@ return {
 				typescriptreact = { "prettier" },
 				html = { "prettier" },
 				htmldjango = { "prettier" },
+				elixir = { "mix" },
+			},
+			formatters = {
+				mix = {
+					command = "mix",
+					args = { "format", "-" },
+					stdin = true,
+				},
 			},
 			log_level = vim.log.levels.TRACE,
 		})
