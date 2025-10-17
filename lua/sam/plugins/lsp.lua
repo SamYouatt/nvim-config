@@ -43,6 +43,7 @@ return {
                 "cssls",
                 "eslint",
                 "tailwindcss",
+                "expert",
             })
 
             -- Diagnostic setup
