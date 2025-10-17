@@ -23,7 +23,7 @@ return {
 					stdin = true,
 				},
 			},
-			log_level = vim.log.levels.TRACE,
+			log_level = vim.log.levels.INFO,
 		})
 
 		vim.keymap.set("n", "<leader>f", function()
