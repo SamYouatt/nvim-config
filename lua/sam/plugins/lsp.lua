@@ -3,7 +3,22 @@ return {
         "saghen/blink.cmp",
         dependencies = "rafamadriz/friendly-snippets",
         version = 'v1.*',
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
         opts = {
+            keymap = {
+                ["<Tab>"] = {
+                    "snippet_forward",
+                    function() -- sidekick next edit suggestion
+                        return require("sidekick").nes_jump_or_apply()
+                    end,
+                    -- function() -- if you are using Neovim's native inline completions
+                    --     return vim.lsp.inline_completion.get()
+                    -- end,
+                    "fallback",
+                },
+            },
+
             completion = {
                 documentation = {
                     auto_show = true,
@@ -44,7 +59,11 @@ return {
                 "eslint",
                 "tailwindcss",
                 "elixirls",
+                -- "expert",
+                "copilot",
             })
+
+            -- vim.lsp.inline_completion.enable()
 
             -- Diagnostic setup
             vim.diagnostic.config {
