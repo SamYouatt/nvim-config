@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	opts = {
 		input = { enabled = true },
-		picker = { enabled = true },
+		picker = { enabled = true, layout = { preset = "ivy", layout = { position = "bottom" }, }, },
 	},
 	keys = {
 		{ "<C-p>",      function() Snacks.picker.git_files({ untracked = true, submodules = true }) end, desc = "Git files" },
