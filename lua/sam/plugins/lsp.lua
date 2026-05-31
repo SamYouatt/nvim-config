@@ -58,9 +58,8 @@ return {
                 "cssls",
                 "eslint",
                 "tailwindcss",
-                "elixirls",
-                -- "expert",
-                "copilot",
+                -- "elixirls",
+                "expert",
             })
 
             -- vim.lsp.inline_completion.enable()
