@@ -22,6 +22,12 @@ return {
 		{ "<leader>fw", function() require("fff").live_grep({ query = vim.fn.expand("<cword>") }) end, desc = "Find word" },
 		{ "<leader>pg", function() require("fff").live_grep({ query = "!dist/ " }) end,                desc = "Live grep" },
 		{ "<leader>pf", function() require("fff").find_files() end,                                    desc = "Find files" },
-		{ "gO",         vim.lsp.buf.document_symbol,                                                   desc = "LSP outline" },
+		{
+			"gO",
+			function()
+				require("mini.extra").pickers.lsp({ scope = "document_symbol" })
+			end,
+			desc = "LSP outline",
+		},
 	},
 }

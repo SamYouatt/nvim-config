@@ -9,6 +9,8 @@ return {
 
 			require("mini.ai").setup({})
 			require("mini.surround").setup()
+			require("mini.pick").setup()
+			require("mini.extra").setup()
 		end,
 
 		-- Make mini-icons function as a replacement for all nvim-web-devicons uses
