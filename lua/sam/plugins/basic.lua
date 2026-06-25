@@ -10,24 +10,26 @@ return {
 
 				vim.keymap.set("n", "]c", function()
 					if vim.wo.diff then
-						vim.cmd.normal({ "]c", bang = true })
-					else
-						gitsigns.nav_hunk("next")
+						return "]c"
 					end
-				end, { buffer = bufnr, desc = "Next git hunk" })
+					vim.schedule(function()
+						gitsigns.nav_hunk("next")
+					end)
+					return "<Ignore>"
+				end, { buffer = bufnr, expr = true, desc = "Next git hunk" })
 
 				vim.keymap.set("n", "[c", function()
 					if vim.wo.diff then
-						vim.cmd.normal({ "[c", bang = true })
-					else
-						gitsigns.nav_hunk("prev")
+						return "[c"
 					end
-				end, { buffer = bufnr, desc = "Previous git hunk" })
+					vim.schedule(function()
+						gitsigns.nav_hunk("prev")
+					end)
+					return "<Ignore>"
+				end, { buffer = bufnr, expr = true, desc = "Previous git hunk" })
 			end,
 		},
 	},
-	"sindrets/diffview.nvim",
 	{ "j-hui/fidget.nvim",                  opts = {} },
 	{ "brenoprata10/nvim-highlight-colors", opts = {} },
-	"sindrets/diffview.nvim",
 }
