@@ -27,16 +27,12 @@ return {
 				comments = { italic = true },
 				keywords = { italic = true },
 				sidebars = "normal",
-				floats = "normal",
+				floats = "dark",
 			},
-			-- Just can't get the light mode to not look shit
-			-- on_colors = function(colors)
-			-- 	if vim.o.background == "dark" then
-			-- 		colors.bg = "#000000" -- Black background for "night"
-			-- 	else
-			-- 		colors.bg = "#FFFFFF" -- White background for "day"
-			-- 	end
-			-- end,
+			dim_inactive = "true",
+			on_colors = function(colors)
+				-- colors.bg = "#191B27"
+			end,
 		}
 	},
 	{

@@ -3,7 +3,22 @@ return {
         "saghen/blink.cmp",
         dependencies = "rafamadriz/friendly-snippets",
         version = 'v1.*',
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
         opts = {
+            keymap = {
+                -- ["<Tab>"] = {
+                --     "snippet_forward",
+                --     function() -- sidekick next edit suggestion
+                --         return require("sidekick").nes_jump_or_apply()
+                --     end,
+                --     -- function() -- if you are using Neovim's native inline completions
+                --     --     return vim.lsp.inline_completion.get()
+                --     -- end,
+                --     "fallback",
+                -- },
+            },
+
             completion = {
                 documentation = {
                     auto_show = true,
@@ -34,47 +49,20 @@ return {
         config = function()
             require("mason").setup()
 
-            -- Completion setup
-            local lspblink = require "blink.cmp"
-            local capabilities = lspblink.get_lsp_capabilities({
-                textDocument = { completion = { completionItem = { snippetSupport = false } } },
+            -- Enable language servers
+            vim.lsp.enable({
+                "rust-analyzer",
+                "zls",
+                "gopls",
+                "lua_ls",
+                "cssls",
+                "eslint",
+                "tailwindcss",
+                -- "elixirls",
+                "expert",
             })
 
-            local lspconfig = require("lspconfig")
-
-            vim.lsp.enable({ "rust-analyzer", "zls", "gopls" })
-
-            -- Setup language servers
-            lspconfig.lua_ls.setup({ capabilities })
-            lspconfig.cssls.setup({ capabilities = { textDocument = { completion = { completionItem = { snippetSupport = true } } } } })
-            lspconfig.eslint.setup({ capabilities })
-            lspconfig.csharp_ls.setup({ capabilities })
-            lspconfig.ocamllsp.setup({ capabilities })
-            lspconfig.svelte.setup({ capabilities })
-            -- super useful reddit post https://www.reddit.com/r/neovim/comments/yukgxy/rust_yew_tailwindcss_intellisense/
-            lspconfig.tailwindcss.setup({
-                filetypes = {
-                    "css",
-                    "html",
-                    "htmldjango",
-                    "javascript",
-                    "javascriptreact",
-                    "typescript",
-                    "typescriptreact",
-                    "tsx",
-                    "svelte",
-                    "rust",
-                },
-                init_options = {
-                    userLanguages = {
-                        rust = "html",
-                    },
-                },
-                -- Only start the tailwindcss lang server if the tailwind config is in the root directory
-                root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.cjs', 'tailwind.config.ts',
-                    'package.json'),
-                capabilities,
-            })
+            -- vim.lsp.inline_completion.enable()
 
             -- Diagnostic setup
             vim.diagnostic.config {
